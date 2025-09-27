@@ -9,7 +9,7 @@ import {
 import { useEffect } from "react";
 
 import type { Route } from "./+types/root";
-import { usePuterStore } from "../lib/puter";
+import { usePuterStore } from "./lib/puter";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [

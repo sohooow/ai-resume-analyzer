@@ -1,87 +1,169 @@
-# Welcome to React Router!
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern web application that provides intelligent feedback on resumes using AI-powered analysis. Built with React Router, TypeScript, and powered by Puter.js for cloud services and AI capabilities.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Overview
+
+AI Resume Analyzer helps job seekers optimize their resumes by providing detailed feedback across multiple categories including ATS compatibility, content quality, structure, tone, and skills assessment. The application uses Claude-3.5-Sonnet AI model to analyze PDF resumes and generate actionable insights.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### Core Functionality
+- PDF resume upload and processing
+- AI-powered resume analysis using Claude-3.5-Sonnet
+- Multi-category scoring system (ATS, Content, Structure, Tone & Style, Skills)
+- Job-specific feedback based on company and role requirements
+- Resume preview with PDF-to-image conversion
+- Historical resume tracking and comparison
+
+### Technical Features
+- Server-side rendering with React Router
+- TypeScript for type safety
+- PDF.js integration for document processing
+- Cloud storage and AI services via Puter.js
+- Responsive design with Tailwind CSS
+- Real-time feedback generation
+- Secure user authentication
+
+## Technology Stack
+
+- **Frontend**: React 19, React Router 7, TypeScript
+- **Styling**: Tailwind CSS with custom components
+- **PDF Processing**: PDF.js for document rendering and conversion
+- **AI Services**: Puter.js platform with Claude-3.5-Sonnet
+- **Cloud Services**: Puter.js for file storage and key-value database
+- **Build Tool**: Vite with React Router integration
+- **Development**: Hot Module Replacement, TypeScript checking
 
 ## Getting Started
 
+### Prerequisites
+- Node.js 18 or higher
+- npm or yarn package manager
+
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+```bash
+git clone https://github.com/sohooow/ai-resume-analyzer.git
+cd ai-resume-analyzer
+```
 
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+4. Open your browser and navigate to `http://localhost:5173`
 
-## Building for Production
+### Usage
 
-Create a production build:
+1. **Authentication**: Sign in using Puter.js authentication
+2. **Upload Resume**: Navigate to the upload page and select a PDF resume
+3. **Job Information**: Provide company name, job title, and job description for targeted analysis
+4. **Analysis**: The AI will process your resume and provide detailed feedback
+5. **Review Results**: View your overall score and category-specific recommendations
+6. **Track Progress**: Access previously analyzed resumes from your dashboard
+
+## Project Structure
+
+```
+ai-resume-analyzer/
+├── app/
+│   ├── components/          # Reusable UI components
+│   │   ├── FileUploader.tsx
+│   │   ├── Summary.tsx
+│   │   ├── Details.tsx
+│   │   └── ...
+│   ├── lib/                 # Utility libraries
+│   │   ├── puter.ts         # Puter.js integration
+│   │   ├── pdf2img.ts       # PDF processing
+│   │   └── utils.ts         # Helper functions
+│   ├── routes/              # Application routes
+│   │   ├── home.tsx
+│   │   ├── upload.tsx
+│   │   ├── resume.tsx
+│   │   └── ...
+│   └── root.tsx             # Root application component
+├── constants/               # Application constants and AI prompts
+├── public/                  # Static assets
+│   └── pdf.worker.min.mjs   # PDF.js worker
+├── types/                   # TypeScript type definitions
+└── package.json
+```
+
+## AI Analysis Categories
+
+The application provides feedback across five key areas:
+
+- **ATS Score**: Applicant Tracking System compatibility
+- **Content**: Quality and relevance of resume content
+- **Structure**: Organization and formatting effectiveness
+- **Tone & Style**: Professional presentation and language
+- **Skills**: Technical and soft skills assessment
+
+Each category receives a score out of 100 and includes specific recommendations for improvement.
+
+## Development
+
+### Available Scripts
+
+- `npm run dev` - Start development server with HMR
+- `npm run build` - Create production build
+- `npm run start` - Start production server
+- `npm run typecheck` - Run TypeScript type checking
+
+### Building for Production
 
 ```bash
 npm run build
 ```
 
+The build artifacts will be stored in the `build/` directory.
+
 ## Deployment
 
 ### Docker Deployment
 
-To build and run using Docker:
+Build and run using Docker:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t ai-resume-analyzer .
+docker run -p 3000:3000 ai-resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+### Platform Deployment
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
+The application can be deployed to any platform supporting Node.js applications:
+
+- Vercel
+- Netlify
 - Railway
+- Heroku
+- AWS
+- Google Cloud Platform
+- Digital Ocean
 
-### DIY Deployment
+## Configuration
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+The application uses environment variables for configuration. Create a `.env` file in the root directory:
 
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+```env
+# Add any required environment variables here
 ```
 
-## Styling
+## License
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
----
+## Acknowledgments
 
-Built with ❤️ using React Router.
+- Built with React Router framework
+- AI services powered by Puter.js platform
+- PDF processing using PDF.js library
+- UI components styled with Tailwind CSS
