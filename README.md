@@ -3,8 +3,11 @@
 A modern web application that provides intelligent feedback on resumes using AI-powered analysis. Built with React Router, TypeScript, and powered by Puter.js for cloud services and AI capabilities.
 
 <img width="1222" height="907" alt="Screenshot 2025-09-27 at 20 35 38" src="https://github.com/user-attachments/assets/cc6da6f7-100f-4955-96f9-7f726862bcb8" />
+
 <img width="1222" height="907" alt="Screenshot 2025-09-27 at 20 35 20" src="https://github.com/user-attachments/assets/96205a1d-9595-4017-af01-4fe5ce4c7b65" />
-<img width="1470" height="919" alt="Screenshot 2025-09-27 at 20 37 31" src="https://github.com/user-attachments/assets/4e129563-f59f-4d14-90ac-0418c389d7d5" />
+
+<img width="1470" height="919" alt="Screenshot 2025-09-27 at 20 37 12" src="https://github.com/user-attachments/assets/24b11ad9-6265-4a0c-8eb5-f9c516a0ee9c" />
+
 
 
 
